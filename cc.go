@@ -181,7 +181,7 @@ func (t *LoyaltyChaincode) setCash(stub shim.ChaincodeStubInterface, args []stri
 	if res.Name != args[0] {
 		return nil, errors.New("(19) Buyer does not exist")
 	}
-	res.Cash, err = strconv.Atoi(args[1]) 
+	res.Cash = args[1] 
 	if err != nil {
 		return nil, errors.New("(20) Cash could not be parsed")
 	}
@@ -216,7 +216,7 @@ func (t *LoyaltyChaincode) setPoints(stub shim.ChaincodeStubInterface, args []st
 	if res.Name != args[0] {
 		return nil, errors.New("(23) Buyer does not exist")
 	}
-	res.Points, err = strconv.Atoi(args[1]) //change the points
+	res.Points = args[1] //change the points
 	if err != nil {
 		return nil, errors.New("(24) Points could not be parsed")
 	}
