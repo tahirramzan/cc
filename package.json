@@ -1,0 +1,14 @@
+{
+  "name": "BlockChian Loyalty App",
+  "version": "1.0.0",
+  "description": "BlockChian Loyalty App",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "BlockChian Loyalty App",
+  "license": "Open Source",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
