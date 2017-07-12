@@ -144,7 +144,7 @@ func (t *LoyaltyChaincode) initUser(stub shim.ChaincodeStubInterface, args []str
 	points := 0
 
 	userAsBytes, err := stub.GetState(args[0])
-	res := Buyrer{}
+	res := Buyer{}
 	json.Unmarshal(userAsBytes, &res) //un stringify it aka JSON.parse()
 	fmt.Println(res)
 	if res.Name == args[0] {
@@ -181,7 +181,7 @@ func (t *LoyaltyChaincode) setCash(stub shim.ChaincodeStubInterface, args []stri
 	if res.Name != args[0] {
 		return nil, errors.New("(19) Buyer does not exist")
 	}
-	res.Cash, err = strconv.Itoa(args[1]) 
+	res.Cash, err = strconv.Atio(args[1]) 
 	if err != nil {
 		return nil, errors.New("(20) Cash could not be parsed")
 	}
@@ -216,7 +216,7 @@ func (t *LoyaltyChaincode) setPoints(stub shim.ChaincodeStubInterface, args []st
 	if res.Name != args[0] {
 		return nil, errors.New("(23) Buyer does not exist")
 	}
-	res.Points, err = strconv.Itoa(args[1]) //change the points
+	res.Points, err = strconv.Atio(args[1]) //change the points
 	if err != nil {
 		return nil, errors.New("(24) Points could not be parsed")
 	}
@@ -252,7 +252,7 @@ func (t *LoyaltyChaincode) getPoints(stub shim.ChaincodeStubInterface, args []st
 		return nil, errors.New("(27) Buyer does not exist")
 	}
 
-	jsonAsBytes, _ := json.Marshal(res.Withdrawl)
+	jsonAsBytes, _ := json.Marshal(res.Points)
 	fmt.Println(jsonAsBytes)
 	fmt.Println("- end getPoints")
 	return jsonAsBytes, nil
@@ -279,7 +279,7 @@ func (t *LoyaltyChaincode) getCash(stub shim.ChaincodeStubInterface, args []stri
 		return nil, errors.New("(30) Buyer does not exist")
 	}
 
-	jsonAsBytes, _ := json.Marshal(res.Withdrawl)
+	jsonAsBytes, _ := json.Marshal(res.Cash)
 	fmt.Println(jsonAsBytes)
 	fmt.Println("- end getCash")
 	return jsonAsBytes, nil
