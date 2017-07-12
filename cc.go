@@ -15,8 +15,8 @@ type LoyaltyChaincode struct {
 
 type Buyer struct {
 	Name   string `json:"name"`
-	Cash   int `json:"cash"`
-	Points int `json:"points"`
+	Cash   string `json:"cash"`
+	Points string `json:"points"`
 }
 
 // ============================================================================================================================
