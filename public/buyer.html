@@ -34,6 +34,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="admin.html">Admin</a></li>
                         <li class="active"><a href="buyer.html">Buyer</a></li>
+                        <li ><a href="exchange.html">Exchange</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,15 +54,17 @@
                 </div>
                 <div class="row"> 
                     <div class="form-group">
-                        <button onclick="pay(100,10)" type="submit" class="btn btn-success">Spend $100 for shopping and get 10 points</button><br><br>
-                        <button onclick="pay(500,100)" type="submit" class="btn btn-warning">Spend $500 for shopping and get 100 points</button><br><br>
-                        <button onclick="pay(1000,250)" type="submit" class="btn btn-danger">Spend $1000 for shopping and get 250 points</button><br><br>
+                        <button onclick="pay('100', '10')" type="submit" class="btn btn-success">Spend $100 for shopping and get 10 points</button><br><br>
+                        <button onclick="pay('500', '100')" type="submit" class="btn btn-warning">Spend $500 for shopping and get 100 points</button><br><br>
+                        <button onclick="pay('1000', '250')" type="submit" class="btn btn-danger">Spend $1000 for shopping and get 250 points</button><br><br>
 
                     </div>
                 </div>
 
 
                 <div id="output">
+                </div>
+                <div id="output2">
                 </div>
 
             </div>

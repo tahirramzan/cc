@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>BlockChian Loyalty App</title>
+        <title>Block Chian Loyalty App</title>
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,13 +27,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">BlockChian Loyalty App</a>
+                    <a class="navbar-brand" href="index.html" >BlockChian Loyalty App</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="admin.html">Admin</a></li>
+                        <li ><a href="admin.html">Admin</a></li>
                         <li><a href="buyer.html">Buyer</a></li>
-                        <li><a href="exchange.html">Exchange</a></li>
+                        <li class="active"><a href="exchange.html">Exchange</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,21 +42,57 @@
         <div class="container">
 
             <div class="starter-template">
-                <div >
+                <div>
                     <h1>BlockChian Loyalty App</h1>
-                    <p class="lead">Use the above navigation bar or the links below for the admin panel or buyer board 
-                        <br>  <a href="admin.html">Admin</a>  
-                        <br><a href="buyer.html">Buyer</a> 
-                        <br><a href="exchange.html">Exchange</a> 
-                    </p>
+                    <p class="lead">Loyalty Points to Cash Amount</p>
                 </div>
+
+                <div class="form-group row form-inline">
+
+                    <div class="col-10">
+                        <input class="form-control" type="text" value="" id="get" placeholder="Username">
+                        <button onclick="getPoints()"  class="btn btn-success">See Buyer Points</button>
+                    </div>
+                    <br>
+                    <div id="output1">
+                    </div>
+                    <br>
+                    <div class="col-10">
+                        <input class="form-control" type="text" value="" id="get" placeholder="Username">
+                        <button onclick="getCash()"  class="btn btn-success">See Buyer Cash</button>
+                    </div>
+
+                </div>
+
+                <div id="output2">
+                </div>
+                <br><br>
+                <div class="form-group row form-inline">
+
+                    <div class="col-10">
+                        <input class="form-control" type="text" value="" id="create" placeholder="Username">
+                        <button onclick="exchange()"  class="btn btn-primary">Exchange</button>
+                    </div>
+
+                </div>
+                <div id="output3">
+                </div>
+                <div id="output4">
+                </div>
+                <div id="output5">
+                </div>
+                <div id="output6">
+                </div>
+
+
 
             </div>
 
         </div>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"><\/script>')</script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <script src="exchange.js"></script>
     </body>
 </html>

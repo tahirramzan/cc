@@ -33,6 +33,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="admin.html">Admin</a></li>
                         <li><a href="buyer.html">Buyer</a></li>
+                        <li><a href="exchange.html">Exchange</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,31 +42,10 @@
         <div class="container">
 
             <div class="starter-template">
+
                 <div>
                     <h1>BlockChian Loyalty App</h1>
-                    <p class="lead">Loyalty Points to Cash Amount</p>
-                </div>
-
-                <div class="form-group row form-inline">
-
-                    <div class="col-10">
-                        <input class="form-control" type="text" value="" id="get" placeholder="Username">
-                        <button onclick="getPoints()"  class="btn btn-success">See Buyer Points</button>
-                    </div>
                     <br>
-                     <div id="output1">
-                </div>
-                    <br>
-                     <div class="col-10">
-                        <input class="form-control" type="text" value="" id="get" placeholder="Username">
-                        <button onclick="getCash()"  class="btn btn-success">See Buyer Cash</button>
-                    </div>
-
-                </div>
-
-                <div id="output2">
-                </div>
-                <div>
                     <p class="lead">Add New Buyer</p>
                 </div>
 
@@ -79,6 +59,33 @@
                 </div>
                 <div id="output3">
                 </div>
+                <br>
+
+                <div>
+
+                    <p class="lead">Check Cash Balance & Loyalty Points</p>
+                </div>
+
+                <div class="form-group row form-inline">
+
+                    <div class="col-10">
+                        <input class="form-control" type="text" value="" id="get" placeholder="Username">
+                        <button onclick="getPoints()"  class="btn btn-success">See Buyer Points</button>
+                    </div>
+                    <br>
+                    <div id="output1">
+                    </div>
+                    <br>
+                    <div class="col-10">
+                        <input class="form-control" type="text" value="" id="get" placeholder="Username">
+                        <button onclick="getCash()"  class="btn btn-success">See Buyer Cash</button>
+                    </div>
+
+                </div>
+
+                <div id="output2">
+                </div>
+
 
             </div>
 

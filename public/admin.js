@@ -1,11 +1,11 @@
-var URL = "https://6afa032b40c547598274b7d497584789-vp0.us.blockchain.ibm.com:5004/chaincode"
+var URL = "https://913f1b7b46ae448391fed6eec75b1948-vp0.us.blockchain.ibm.com:5003/chaincode"
 var myKeyVals =       {
         "jsonrpc": "2.0",
         "method": "query",
         "params": {
             "type": 1,
             "chaincodeID": {
-            "name": "b650b145904926edeb57bbb8e19c8e9943ea26198be44a1f9eb7f26c45196fd8fc79d78ee8556ea5f1c74f89d10b73cc662e72c16b684d53794f32f1ca5a0449"
+            "name": "0e11ff13ea3f6eb74252b43b8d3dec09f632f8144d40ce564eb243b59e427def745aca7db9d92be6b5bbd7fad2d6ebde566a82f1a27d6f7900082d1fca2657f4"
             },
             "ctorMsg": {
             "function": "getPoints",
