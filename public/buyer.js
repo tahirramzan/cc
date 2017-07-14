@@ -28,12 +28,12 @@ function pay(cash, points) {
         $('#output').append('<h1 class="text-warning">Enter your username</h1>');
         return
     }
-        
+
     getCash();
     sleep(1000);
     getPoints();
     sleep(1000);
-    
+
     var i = Number(x);
     var j = Number(y);
     var k = Number(points);
@@ -41,11 +41,11 @@ function pay(cash, points) {
     var cashh = cash;
     var pointss = points;
     //$('#output').append('<h1 class="text-success">x='+x+' y='+y+' i='+i+' j='+j+' k='+k+' l='+l+'</h1>');
-    i= i+k;
-    j= j-l;
-    points = ""+i;
-    cash =""+j;
-    
+    i = i + k;
+    j = j - l;
+    points = "" + i;
+    cash = "" + j;
+
     myKeyVals.params.ctorMsg.args = [input, cash];
 
     $.ajax({
@@ -61,7 +61,7 @@ function pay(cash, points) {
 
             if (resultData.error == null || resultData.error == undefined) {
 
-                $('#output').append('<h1 class="text-success">' + input + ' has spent $' + cashh + ' and the remaing cash is $'+cash+'</h1>');
+                $('#output').append('<h1 class="text-success">' + input + ' has spent $' + cashh + ' and the remaing cash is $' + cash + '</h1>');
 
                 console.log(resultData.result.message);
             } else {
@@ -97,7 +97,7 @@ function point(username, points, pointss) {
 
             if (resultData.error == null || resultData.error == undefined) {
 
-                $('#output2').append('<h1 class="text-warning">' + username + ' has won ' + pointss + ' points and the total points are '+points+'</h1>');
+                $('#output2').append('<h1 class="text-warning">' + username + ' has won ' + pointss + ' points and the total points are ' + points + '</h1>');
 
                 console.log(resultData.result.message);
             } else {
@@ -140,9 +140,9 @@ function getPoints() {
                 } else {
                     var message = resultData.result.message.replace(/\"/g, "");
                     console.log(message);
-                     x = message;
+                    x = message;
                     //  $('#output').append('<h1 class="text-success">getPoints '+x+ '</h1>');
-                      return message;
+                    return message;
 
 
 
@@ -152,7 +152,7 @@ function getPoints() {
             } else {
                 $('#output1').append('<h1 class="text-danger">Error</h1><p class="lead">' + resultData.error.data + '</p>');
                 console.log(resultData.error.data)
-                
+
             }
 
         }
@@ -184,7 +184,7 @@ function getCash() {
                     console.log(message);
 
                     y = message;
-                 //   $('#output').append('<h1 class="text-success">getCash '+y+ '</h1>');
+                    //   $('#output').append('<h1 class="text-success">getCash '+y+ '</h1>');
                     return message;
 
                 }
@@ -196,16 +196,16 @@ function getCash() {
             }
 
         }
-        
+
 
     })
 }
 
 function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
     }
-  }
 }
