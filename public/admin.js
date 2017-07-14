@@ -1,11 +1,11 @@
-var URL = "https://913f1b7b46ae448391fed6eec75b1948-vp0.us.blockchain.ibm.com:5003/chaincode"
+var URL = "https://b2177f8ca43f4a33a267933c58c56547-vp0.us.blockchain.ibm.com:5004/chaincode"
 var myKeyVals =       {
         "jsonrpc": "2.0",
         "method": "query",
         "params": {
             "type": 1,
             "chaincodeID": {
-            "name": "0e11ff13ea3f6eb74252b43b8d3dec09f632f8144d40ce564eb243b59e427def745aca7db9d92be6b5bbd7fad2d6ebde566a82f1a27d6f7900082d1fca2657f4"
+            "name": "a4e481b60b2e2d54861263f028758c93ecd9c9fc45072bc4b085fc7ec9c5c53cac4311759b376137b0d9ddc2944caaf13986935c52abe56acb55a348deb10a1d"
             },
             "ctorMsg": {
             "function": "getPoints",
@@ -23,12 +23,13 @@ var user = "test";
 function getPoints() {
      $('#output1').empty();
     var input = document.getElementById("get").value;
-    myKeyVals.params.ctorMsg.args = [input];
-    myKeyVals.params.ctorMsg.function ="getPoints";
+    var myKeyVals1 = jQuery.extend(true, {}, myKeyVals);
+    myKeyVals1.params.ctorMsg.args = [input];
+    myKeyVals1.params.ctorMsg.function ="getPoints";
     $.ajax({
         type: "POST",
         url: URL,
-        data: JSON.stringify(myKeyVals),
+        data: JSON.stringify(myKeyVals1),
         dataType: "text",
         success: function(resultData) { 
             resultData = JSON.parse(resultData);
@@ -61,12 +62,13 @@ function getPoints() {
 function getCash() {
      $('#output2').empty();
     var input = document.getElementById("get").value;
-    myKeyVals.params.ctorMsg.args = [input];
-    myKeyVals.params.ctorMsg.function = "getCash";
+    var myKeyVals2 = jQuery.extend(true, {}, myKeyVals);
+    myKeyVals2.params.ctorMsg.args = [input];
+    myKeyVals2.params.ctorMsg.function = "getCash";
     $.ajax({
         type: "POST",
         url: URL,
-        data: JSON.stringify(myKeyVals),
+        data: JSON.stringify(myKeyVals2),
         dataType: "text",
         success: function(resultData) { 
             resultData = JSON.parse(resultData);
