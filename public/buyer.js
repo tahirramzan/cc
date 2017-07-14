@@ -119,7 +119,7 @@ function point(username, points, pointss) {
 
 function getPoints() {
 
-    var input = z;
+    var input = document.getElementById("username").value;
     var newKeyVals = jQuery.extend(true, {}, myKeyVals);
     newKeyVals.method = "query";
     newKeyVals.params.ctorMsg.args = [input];
@@ -161,7 +161,7 @@ function getPoints() {
 }
 function getCash() {
 
-    var input = z;
+    var input = document.getElementById("username").value;
     var newKeyVals = jQuery.extend(true, {}, myKeyVals);
     newKeyVals.method = "query";
     newKeyVals.params.ctorMsg.args = [input];

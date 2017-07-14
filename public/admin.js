@@ -8,7 +8,7 @@ var myKeyVals =       {
             "name": "a4e481b60b2e2d54861263f028758c93ecd9c9fc45072bc4b085fc7ec9c5c53cac4311759b376137b0d9ddc2944caaf13986935c52abe56acb55a348deb10a1d"
             },
             "ctorMsg": {
-            "function": "getPoints",
+            "function": "getCash",
             "args": [
                 "test"
             ]
@@ -22,7 +22,7 @@ var user = "test";
 
 function getPoints() {
      $('#output1').empty();
-    var input = document.getElementById("get").value;
+    var input = document.getElementById("get1").value;
     var myKeyVals1 = jQuery.extend(true, {}, myKeyVals);
     myKeyVals1.params.ctorMsg.args = [input];
     myKeyVals1.params.ctorMsg.function ="getPoints";
@@ -61,7 +61,7 @@ function getPoints() {
 }
 function getCash() {
      $('#output2').empty();
-    var input = document.getElementById("get").value;
+    var input = document.getElementById("get2").value;
     var myKeyVals2 = jQuery.extend(true, {}, myKeyVals);
     myKeyVals2.params.ctorMsg.args = [input];
     myKeyVals2.params.ctorMsg.function = "getCash";
@@ -118,7 +118,7 @@ function initUser() {
             
             if (resultData.error == null || resultData.error == undefined) {
                 
-                $('#output3').append('<h1 class="text-success">Buyer successfully created  "' + input +'"</h1>');
+                $('#output3').append('<h1 class="text-success">Buyer successfully created  "' + input +' "</h1>');
                 console.log(resultData.result.message);
             }
             else {

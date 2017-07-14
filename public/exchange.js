@@ -30,7 +30,7 @@ function getPoints() {
     $('#output4').empty();
     $('#output5').empty();
     $('#output6').empty();
-    var input = document.getElementById("get").value;
+    var input = document.getElementById("get1").value;
     myKeyVals.params.ctorMsg.args = [input];
     myKeyVals.params.ctorMsg.function = "getPoints";
     $.ajax({
@@ -78,7 +78,7 @@ function getCash() {
     $('#output5').empty();
     $('#output6').empty();
 
-    var input = document.getElementById("get").value;
+    var input = document.getElementById("get2").value;
     myKeyVals.params.ctorMsg.args = [input];
     myKeyVals.params.ctorMsg.function = "getCash";
     $.ajax({
@@ -127,7 +127,7 @@ function exchange() {
     $('#output4').empty();
     $('#output5').empty();
     $('#output6').empty();
-    var input = document.getElementById("get").value;
+    var input = document.getElementById("exchange").value;
     z = false;
     getPoints();
     z = false;
