@@ -1,1 +1,1 @@
-# BlockChian Loyalty App
+# BlockChian Go ChainCode & Node.js Client Loyalty App
